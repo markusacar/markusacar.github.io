@@ -425,9 +425,9 @@
       -->
       <section class="resume">
 
-        <h3 class="h3 highlights-title">RESUME</h3>
+        <h3 class="h3 resume-title">RESUME</h3>
         
-        <ul class="highlights-list has-scrollbar">
+        <ul class="resume-list has-scrollbar">
 
           <div class="title-wrapper">
             <div class="icon-box">
@@ -648,30 +648,27 @@
           </ul>
 
         </section>
-        
-        </article>
-
-
-
-
 
       <!--
         - #TEDx
       -->
 
-      <article class="TEDx" data-page="TEDx">
+      <section class="tedx">
 
-        <header>
-          <h2 class="h2 article-title">TEDx</h2>
-        </header>
+        <h3 class="h3 tedx-title">TEDx</h3>
         
-        <div class="video-container">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/RsV2PmbwfkI" frameborder="0" allowfullscreen></iframe>
-        </div>
+        <ul class="tedx-list has-scrollbar"> 
+          <div class="video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/RsV2PmbwfkI" frameborder="0" allowfullscreen></iframe>
+</div>
 
-        <p>Giving a TEDx talk was an experience that I will always cherish. Receiving the invitation to give a TEDx talk filled me with excitement and a sense of honor. I had watched countless TED talks before and admired the speakers who were able to captivate and inspire their audience. Now it was my turn to take the stage and share my ideas. Since my TEDx talk was in Turkish and there is no English subtitle version available yet, I will share the English transcript of my talk here with you. Here we go!</p>
+<p>Giving a TEDx talk was an experience that I will always cherish. Receiving the invitation to give a TEDx talk filled me with excitement and a sense of honor. I had watched countless TED talks before and admired the speakers who were able to captivate and inspire their audience. Now it was my turn to take the stage and share my ideas.</p>
 
-        <p>Robert Frost said, "Two roads diverged in a wood, and I took the one less traveled by, And that has made all the difference." In this talk, I will try to convey what it takes to walk the road I have chosen, the factors that make a difference, the choices I have faced, and the decisions I have made.
+<button id="readMoreBtn" onclick="toggleContent()">Read More</button>
+
+<div id="extraContent" style="display:none;">
+  <!-- The rest of the content goes here -->
+  <p>Robert Frost said, "Two roads diverged in a wood, and I took the one less traveled by, And that has made all the difference." In this talk, I will try to convey what it takes to walk the road I have chosen, the factors that make a difference, the choices I have faced, and the decisions I have made.
 
           Hello everyone, my name is Markus Acar. I am a student and I was born and raised in Mardin. I am a young person who works to make a positive impact on people's lives and to make the world a more livable place. I don't want to introduce myself at length at the beginning, but I can share with you three foundations that make Markus who he is, and that are important in my current and future work: Limitlessness, Curiosity, and Thinking.
           
@@ -692,6 +689,23 @@
           Now, what are these thinking styles, you may ask. Critical thinking is defined as "designing and managing projects, problem-solving, and making effective decisions using various resources." In today's world, we really do not learn or teach thinking skills. The education system should not make an obsession out of excessive specialization. It should encourage critical intelligence. Students do not have the necessary tools to analyze the modern world. We should learn how to think before we are taught what to think about. Through the use of analogies, people have come up with many innovative ideas and creative solutions to problems. Let me tell you this. When Kepler turned 25 at the end of the 16th century, he had accepted Copernicus' planet model in which the sun revolves around the orbit, and then asked another question: why do planets farther from the sun move more slowly? Kepler was so far beyond the limits of previous thinking that there was no evidence he could work with. Therefore, he had to use analogies. Just like Eddington using a tablecloth and some fruit to explain Einstein's theory of general relativity. I believe that we should approach topics in this way in our current and future work.
           
           In a world constantly facing rapidly changing demands, we need people who are not afraid to try new things, who think broadly and have a wide range of experiences to find creative solutions. Yes, I'm talking about the Leonardo da Vincis of the 21st century. We also need individuals who do not limit themselves, who do not recognize boundaries. I would like to end my speech with Herminia Ibarra's words: " We need to learn who we are in practice, not in theory. Thank you for listening to me.</p>
+</div>
+
+<script>
+  function toggleContent() {
+    var content = document.getElementById("extraContent");
+    var button = document.getElementById("readMoreBtn");
+
+    if (content.style.display === "none") {
+      content.style.display = "block";
+      button.innerText = "Read Less";
+    } else {
+      content.style.display = "none";
+      button.innerText = "Read More";
+    }
+  }
+</script>
+
       </article>
       
 

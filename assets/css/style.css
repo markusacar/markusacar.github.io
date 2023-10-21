@@ -829,6 +829,16 @@ main {
   line-height: 1.6;
 }
 
+.timeline a {
+    color: #F2F91B; /
+    text-decoration: none; 
+}
+
+.timeline a:hover, .timeline a:focus {
+    color: #E0E0E0; 
+    text-decoration: underline; 
+}
+
 
 /**
  * skills 

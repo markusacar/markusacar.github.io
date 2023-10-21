@@ -829,15 +829,17 @@ main {
   line-height: 1.6;
 }
 
-.timeline a {
-    color: #F2F91B; /
-    text-decoration: none; 
+/* CSS targeting the links specifically in your timeline list */
+.timeline-list .timeline-item a {
+    color: #FFFFFF; /* Choose a color that is readable on your background. White is used as an example. */
+    text-decoration: none; /* Optional: if you don't want underlines on links */
 }
 
-.timeline a:hover, .timeline a:focus {
-    color: #E0E0E0; 
-    text-decoration: underline; 
+.timeline-list .timeline-item a:hover, .timeline-list .timeline-item a:focus {
+    color: #E0E0E0; /* A different color for hover effect, could be a lighter shade */
+    text-decoration: underline; /* Adds underline on hover or focus */
 }
+
 
 
 /**

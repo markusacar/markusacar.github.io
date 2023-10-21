@@ -832,7 +832,7 @@ main {
 /* CSS targeting the links specifically in your timeline list */
 .timeline-list .timeline-item a {
     color: #FFFFFF; /* Choose a color that is readable on your background. White is used as an example. */
-    text-decoration: none; /* Optional: if you don't want underlines on links */
+    text-decoration: underline; /* Optional: if you don't want underlines on links */
 }
 
 .timeline-list .timeline-item a:hover, .timeline-list .timeline-item a:focus {

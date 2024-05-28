@@ -632,51 +632,11 @@ Goal: 20 Unicorns founded by Turkish Founders in 20 Years.
         - #BLOG
       -->
 
-      <div class="section-spacing">    
-      <section class="blog">
-
-        <h3 class="h3 blog-title">Recent Work</h3>
-        
-        <ul class="blog-list has-scrollbar">
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="https://www.linkedin.com/posts/markus-acar_cna2023-future-energy-activity-7035049852153585664-Dka2?utm_source=share&utm_medium=member_desktop">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog1.jpg" alt="Canadian Nuclear Association conference 2023" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">recent work</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Feb 23, 2023</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Canadian Nuclear Association conference 2023</h3>
-
-                  <p class="blog-text">
-                    Had a great time at the CNA2023 conference and trade show, connecting with fellow professionals and experts in the nuclear energy field.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-          
-          </ul>
-
-        </section>
-        </div>
+      <section id="social-posts">
+  <h2 class="h2">Recent Posts</h2>
+  <div id="linkedin-posts"></div>
+  <div id="twitter-posts"></div>
+      </section>
         
 
       <!--
@@ -741,6 +701,62 @@ Goal: 20 Unicorns founded by Turkish Founders in 20 Years.
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!--
+    - blog js link
+  -->
+
+  document.addEventListener('DOMContentLoaded', function() {
+  fetchLinkedInPosts();
+  fetchTwitterPosts();
+});
+
+function fetchLinkedInPosts() {
+  // Fetch LinkedIn posts
+  fetch('https://api.linkedin.com/v2/me', {
+    headers: {
+      'Authorization': 'Bearer YOUR_ACCESS_TOKEN'
+    }
+  })
+  .then(response => response.json())
+  .then(data => {
+    const linkedinContainer = document.getElementById('linkedin-posts');
+    data.elements.forEach(post => {
+      const postElement = document.createElement('div');
+      postElement.className = 'linkedin-post';
+      postElement.innerHTML = `
+        <h3>${post.headline}</h3>
+        <p>${post.summary}</p>
+        <a href="${post.url}" target="_blank">Read more</a>
+      `;
+      linkedinContainer.appendChild(postElement);
+    });
+  })
+  .catch(error => console.error('Error fetching LinkedIn posts:', error));
+}
+
+function fetchTwitterPosts() {
+  // Fetch Twitter posts
+  fetch('https://api.twitter.com/2/tweets?ids=YOUR_TWEET_IDS', {
+    headers: {
+      'Authorization': 'Bearer YOUR_BEARER_TOKEN'
+    }
+  })
+  .then(response => response.json())
+  .then(data => {
+    const twitterContainer = document.getElementById('twitter-posts');
+    data.data.forEach(tweet => {
+      const tweetElement = document.createElement('div');
+      tweetElement.className = 'twitter-post';
+      tweetElement.innerHTML = `
+        <p>${tweet.text}</p>
+        <a href="https://twitter.com/user/status/${tweet.id}" target="_blank">View on Twitter</a>
+      `;
+      twitterContainer.appendChild(tweetElement);
+    });
+  })
+  .catch(error => console.error('Error fetching Twitter posts:', error));
+}
 
 </body>
 

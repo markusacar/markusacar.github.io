@@ -1790,6 +1790,19 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 
+#social-posts {
+  margin: 20px;
+}
+
+.linkedin-post, .twitter-post {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.linkedin-post h3, .twitter-post p {
+  margin: 0 0 10px;
+}
 
 
 

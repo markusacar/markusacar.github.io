@@ -519,12 +519,14 @@ main {
   margin-left: 20px;
 }
 
-.about-text strong {
-  color: var(--dark-gray);
+.about-text a {
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
-.about-text p { margin-bottom: 15px; }
-
+.about-text a:hover {
+  text-decoration: underline;
+}
 
 
 /**

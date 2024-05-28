@@ -702,61 +702,58 @@ Goal: 20 Unicorns founded by Turkish Founders in 20 Years.
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-  <!--
-    - blog js link
-  -->
-
-  document.addEventListener('DOMContentLoaded', function() {
-  fetchLinkedInPosts();
-  fetchTwitterPosts();
-});
-
-function fetchLinkedInPosts() {
-  // Fetch LinkedIn posts
-  fetch('https://api.linkedin.com/v2/me', {
-    headers: {
-      'Authorization': 'Bearer YOUR_ACCESS_TOKEN'
-    }
-  })
-  .then(response => response.json())
-  .then(data => {
-    const linkedinContainer = document.getElementById('linkedin-posts');
-    data.elements.forEach(post => {
-      const postElement = document.createElement('div');
-      postElement.className = 'linkedin-post';
-      postElement.innerHTML = `
-        <h3>${post.headline}</h3>
-        <p>${post.summary}</p>
-        <a href="${post.url}" target="_blank">Read more</a>
-      `;
-      linkedinContainer.appendChild(postElement);
+  <!-- Inline JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      fetchLinkedInPosts();
+      fetchTwitterPosts();
     });
-  })
-  .catch(error => console.error('Error fetching LinkedIn posts:', error));
-}
 
-function fetchTwitterPosts() {
-  // Fetch Twitter posts
-  fetch('https://api.twitter.com/2/tweets?ids=YOUR_TWEET_IDS', {
-    headers: {
-      'Authorization': 'Bearer YOUR_BEARER_TOKEN'
+    function fetchLinkedInPosts() {
+      fetch('https://api.linkedin.com/v2/me', {
+        headers: {
+          'Authorization': 'Bearer YOUR_ACCESS_TOKEN'
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        const linkedinContainer = document.getElementById('linkedin-posts');
+        data.elements.forEach(post => {
+          const postElement = document.createElement('div');
+          postElement.className = 'linkedin-post';
+          postElement.innerHTML = `
+            <h3>${post.headline}</h3>
+            <p>${post.summary}</p>
+            <a href="${post.url}" target="_blank">Read more</a>
+          `;
+          linkedinContainer.appendChild(postElement);
+        });
+      })
+      .catch(error => console.error('Error fetching LinkedIn posts:', error));
     }
-  })
-  .then(response => response.json())
-  .then(data => {
-    const twitterContainer = document.getElementById('twitter-posts');
-    data.data.forEach(tweet => {
-      const tweetElement = document.createElement('div');
-      tweetElement.className = 'twitter-post';
-      tweetElement.innerHTML = `
-        <p>${tweet.text}</p>
-        <a href="https://twitter.com/user/status/${tweet.id}" target="_blank">View on Twitter</a>
-      `;
-      twitterContainer.appendChild(tweetElement);
-    });
-  })
-  .catch(error => console.error('Error fetching Twitter posts:', error));
-}
+
+    function fetchTwitterPosts() {
+      fetch('https://api.twitter.com/2/tweets?ids=YOUR_TWEET_IDS', {
+        headers: {
+          'Authorization': 'Bearer YOUR_BEARER_TOKEN'
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        const twitterContainer = document.getElementById('twitter-posts');
+        data.data.forEach(tweet => {
+          const tweetElement = document.createElement('div');
+          tweetElement.className = 'twitter-post';
+          tweetElement.innerHTML = `
+            <p>${tweet.text}</p>
+            <a href="https://twitter.com/user/status/${tweet.id}" target="_blank">View on Twitter</a>
+          `;
+          twitterContainer.appendChild(tweetElement);
+        });
+      })
+      .catch(error => console.error('Error fetching Twitter posts:', error));
+    }
+  </script>
 
 </body>
 

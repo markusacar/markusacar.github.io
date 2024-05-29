@@ -7,9 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="text/javascript" src="./assets/js/script.js"></script>
   <title>Markus - Personal Portfolio</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TEDx Talk</title>
   <style>
     body {
       color: white;
@@ -26,6 +23,28 @@
       cursor: pointer;
       padding: 10px 20px;
       font-size: 16px;
+    }
+    .education .school {
+      display: flex;
+      margin-bottom: 20px;
+    }
+    .education .school-logo {
+      width: 80px;
+      height: auto;
+      margin-right: 20px;
+    }
+    .education .school-details {
+      flex: 1;
+    }
+    .education .school-name {
+      margin: 0;
+    }
+    .education .school-duration {
+      margin: 5px 0;
+    }
+    .education .school-desc-bullets {
+      list-style: disc;
+      padding-left: 20px;
     }
   </style>
   
@@ -201,6 +220,36 @@
       <li><strong>Engagement:</strong> TEDx speaker, active in tech communities and events</li>
     </ul>
   </section>
+
+
+  <!-- Education Section -->
+    <section class="education">
+      <h3 class="h3 education-title">Education</h3>
+      <div class="school">
+        <img src="./assets/images/mcmasterLogo.png" alt="McMaster University Logo" class="school-logo">
+        <div class="school-details">
+          <h4 class="h4 school-name">McMaster University</h4>
+          <p class="school-duration">Expected Graduation: 2025</p>
+          <p class="school-desc">Computer Science student specializing in AI applications, software development, and project management.</p>
+          <ul class="school-desc-bullets">
+            <li>Participated in AI research projects.</li>
+            <li>Developed AI-powered applications for real-world use cases.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="school">
+        <img src="./assets/images/harvardLogo.png" alt="Harvard University Logo" class="school-logo">
+        <div class="school-details">
+          <h4 class="h4 school-name">Harvard University</h4>
+          <p class="school-duration">September 2017 - April 2019</p>
+          <p class="school-desc">Master of Science in Computer Science.</p>
+          <ul class="school-desc-bullets">
+            <li>Participated in the research of XXX and published 3 papers.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
         <!--
         - service
@@ -628,16 +677,6 @@ Goal: 20 Unicorns founded by Turkish Founders in 20 Years.
 </div>
           
           
-      <!--
-        - #BLOG
-      -->
-
-      <section id="social-posts">
-  <h2 class="h2">Recent Posts</h2>
-  <div id="linkedin-posts"></div>
-  <div id="twitter-posts"></div>
-      </section>
-        
 
       <!--
         - #CONTACT
@@ -702,59 +741,7 @@ Goal: 20 Unicorns founded by Turkish Founders in 20 Years.
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-  <!-- Inline JavaScript -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      fetchLinkedInPosts();
-      fetchTwitterPosts();
-    });
-
-    function fetchLinkedInPosts() {
-      fetch('https://api.linkedin.com/v2/me', {
-        headers: {
-          'Authorization': 'Bearer YOUR_ACCESS_TOKEN'
-        }
-      })
-      .then(response => response.json())
-      .then(data => {
-        const linkedinContainer = document.getElementById('linkedin-posts');
-        data.elements.forEach(post => {
-          const postElement = document.createElement('div');
-          postElement.className = 'linkedin-post';
-          postElement.innerHTML = `
-            <h3>${post.headline}</h3>
-            <p>${post.summary}</p>
-            <a href="${post.url}" target="_blank">Read more</a>
-          `;
-          linkedinContainer.appendChild(postElement);
-        });
-      })
-      .catch(error => console.error('Error fetching LinkedIn posts:', error));
-    }
-
-    function fetchTwitterPosts() {
-      fetch('https://api.twitter.com/2/tweets?ids=YOUR_TWEET_IDS', {
-        headers: {
-          'Authorization': 'Bearer YOUR_BEARER_TOKEN'
-        }
-      })
-      .then(response => response.json())
-      .then(data => {
-        const twitterContainer = document.getElementById('twitter-posts');
-        data.data.forEach(tweet => {
-          const tweetElement = document.createElement('div');
-          tweetElement.className = 'twitter-post';
-          tweetElement.innerHTML = `
-            <p>${tweet.text}</p>
-            <a href="https://twitter.com/user/status/${tweet.id}" target="_blank">View on Twitter</a>
-          `;
-          twitterContainer.appendChild(tweetElement);
-        });
-      })
-      .catch(error => console.error('Error fetching Twitter posts:', error));
-    }
-  </script>
-
+  
 </body>
 
 </html>

@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="./assets/js/script.js"></script>
+  <title>Markus - Personal Portfolio</title>
+  <style>
+    body {
+      color: white;
+      background-color: black;
+    }
+    .section-spacing {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    button#readMoreBtn {
+      background-color: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    .education .school {
+      display: flex;
+      align-items: center; /* Align items vertically */
+      margin-bottom: 20px;
+    }
+    .education .school-logo {
+      width: auto; /* Maintain aspect ratio */
+      height: 100px; /* Set a fixed height */
+      margin-right: 20px;
+    }
+    .education .school-details {
+      flex: 1;
+    }
+    .education .school-name {
+      margin: 0;
+      font-size: 1.5em; /* Adjust font size if needed */
+    }
+
+    .education .school-duration {
+      margin: 5px 0;
+    }
+
+    .education .school-desc-bullets {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+
+
+    
+  </style>
+  
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/Myphoto.JPG" alt="Markus Acar" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Markus Acar">Markus Acar</h1>
+
+          <p class="title">Computer Science Student</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:acarm@mcmaster.ca" class="contact-link">acarm@mcmaster.ca</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Hamilton, Ontario, Canada</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/markus-acar/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://twitter.com/markus_acar" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/markus.acar/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+    
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>Portfolio Page</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      
+      <style>
+  /* Add space between sections */
+  .about, .education, .twitter-section, .service {
+    margin-bottom: 40px; /* Adjust the value as needed */
+  }
+</style>
+
+<!-- #ABOUT -->
+<article class="about active" data-page="about">
+  <header>
+    <h2 class="h2 article-title">About me</h2>
+  </header>
+  <section class="about-text">
+    <p><strong>Markus Acar,</strong> a computer science student at McMaster University in Ontario, Canada, has achieved remarkable success in prestigious science and technology competitions. Hailing from Mardin, Turkey, Markus reached the finals of CERN’s 2020 particle physics competition with their e-detector project and secured third place in the 2018 National Science Project Competition with a smart city initiative.</p> 
+    <p>In 2021, he delivered a TEDx talk titled "Sınırların Ötesine Yolculuk" at TEDxMEFUniversity in Istanbul, emphasizing the importance of perseverance.</p>
+    <p>Currently, Markus is an Advanced Computer Technology Coordinator (Co-op) at Ontario Shipyards, where he develops AI-powered applications and manages the company’s website. His skills span AI, web development, project management, and technology leadership. An entrepreneur at heart, he co-founded Technosophia, a Euro-Asian community for tech professionals, and leads the Toronto chapter of Turks in Tech, supporting startups and fostering innovation. Additionally, he co-founded Cosmos Data, a popular science and technology blog with over 80k Instagram followers.</p>
+  </section>
+  
+
+<!-- Education Section -->
+<section class="education">
+  <h3 class="h3 education-title">Education</h3>
+  <div class="school">
+    <img src="./assets/images/mcmasterLogo.png" alt="McMaster University Logo" class="school-logo">
+    <div class="school-details">
+      <h4 class="h4 school-name">McMaster University</h4>
+      <p class="school-duration">Expected Graduation: 2025</p>
+      <p class="school-desc">Computer Science student specializing in AI applications, software development, and project management.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Service Section -->
+<section class="service">
+  <h3 class="h3 service-title">What I'm doing</h3>
+  <ul class="service-list">
+    <li class="service-item">
+      <div class="service-content-box">
+        <h4 class="h4 service-item-title">Co-Founder & Lead, Turks in Tech Toronto</h4>
+        <p class="service-item-text">Leading the Toronto chapter of Turks in Tech. Fostering innovation and supporting startups. Goal: 20 Unicorns founded by Turkish Founders in 20 Years.</p>
+      </div>
+    </li>
+    <li class="service-item">
+      <div class="service-content-box">
+        <h4 class="h4 service-item-title">Co-Founder, Technosophia</h4>
+        <p class="service-item-text">Leading tech initiatives and fostering ethical decision-making through technology and philosophy.</p>
+      </div>
+    </li>
+    <li class="service-item">
+      <div class="service-content-box">
+        <h4 class="h4 service-item-title">Advanced Computer Technology Coordinator, Ontario Shipyards</h4>
+        <p class="service-item-text">Developed an AI-powered application to enhance cross-departmental communication and operational efficiency. Coordinated advanced computer technology operations as part of Ontario Shipyard modernization projects.</p>
+      </div>
+    </li>
+    <li class="service-item">
+      <div class="service-content-box">
+        <h4 class="h4 service-item-title">Member, NAYGN at Mac</h4>
+        <p class="service-item-text">As a member of North American Young Generation in Nuclear at McMaster, I am dedicated to promoting the benefits of nuclear science and technology, and supporting the professional development of young people in the field.</p>
+      </div>
+    </li>
+  </ul>
+</section>
+
+
+
+      <!--
+        - languages
+      -->
+
+      <section class="languages">
+
+        <h3 class="h3 languages-title">Languages</h3>
+
+        <ul class="languages-list has-scrollbar">
+
+          <li class="languages-item">
+            <div class="content-card" data-languages-item>
+
+              
+
+              <h4 class="h4 languages-item-title" data-languages-title>English</h4>
+
+              <div class="languages-text" data-languages-text>
+                <p>
+                  Full professional proficiency.
+                </p>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="languages-item">
+            <div class="content-card" data-languages-item>
+
+              
+
+              <h4 class="h4 languages-item-title" data-languages-title>Turkish</h4>
+
+              <div class="languages-text" data-languages-text>
+                <p>
+                  Native or bilingual proficiency.
+                </p>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="languages-item">
+            <div class="content-card" data-languages-item>
+
+
+              <h4 class="h4 languages-item-title" data-languages-title>Syriac(Aramaic)</h4>
+
+              <div class="languages-text" data-languages-text>
+                <p>
+                  Native or bilingual proficiency.
+                </p>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="languages-item">
+            <div class="content-card" data-languages-item>
+
+
+              <h4 class="h4 languages-item-title" data-languages-title>Arabic</h4>
+
+              <div class="languages-text" data-languages-text>
+                <p>
+                  Limited working proficiency.
+                </p>
+              </div>
+
+            </div>
+          </li>
+
+        </ul>
+
+      </section>
+
+
+      <!--
+        - languages modal
+      -->
+
+      <div class="modal-container" data-modal-container>
+
+        <div class="overlay" data-overlay></div>
+
+        <section class="languages-modal">
+
+          <button class="modal-close-btn" data-modal-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <div class="modal-img-wrapper">
+
+            <img src="./assets/images/icon-quote.svg" alt="quote icon">
+          </div>
+
+          <div class="modal-content">
+
+            <h4 class="h3 modal-title" data-modal-title>English</h4>
+
+            <time datetime="2021-06-14">14 June, 2021</time>
+
+            <div data-modal-text>
+              <p>
+                Full professional proficiency
+              </p>
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+
+
+      <!--
+        - highlights
+      -->
+
+      <section class="highlights">
+
+        <h3 class="h3 highlights-title">Highlights</h3>
+
+        <ul class="highlights-list has-scrollbar">
+
+          <li class="highlights-item">
+            <a href="#">
+              <img src="./assets/images/tedx.png" alt="highlight logo">
+            </a>
+          </li>
+
+          <li class="highlights-item">
+            <a href="#">
+              <img src="./assets/images/turksintech.png" alt="highlight logo">
+            </a>
+          </li>
+
+          <li class="highlights-item">
+            <a href="#">
+              <img src="./assets/images/cern.png" alt="highlight logo">
+            </a>
+          </li>
+
+          <li class="highlights-item">
+            <a href="#">
+              <img src="./assets/images/technosophia.png" alt="highlight logo">
+            </a>
+          </li>
+
+          <li class="highlights-item">
+            <a href="#">
+              <img src="./assets/images/aspire.png" alt="highlight logo">
+            </a>
+          </li>
+
+          <li class="highlights-item">
+            <a href="#">
+              <img src="./assets/images/naygnlogo.png" alt="highlight logo">
+            </a>
+          </li>
+          
+        </ul>
+
+      </section>
+
+
+        
+      <!--
+        - #RESUME
+      -->
+      <div class="section-spacing">
+
+  <section class="resume">
+
+    <h3 class="h3 resume-title">RESUME</h3>
+
+    <ul class="resume-list has-scrollbar">
+
+      <div class="title-wrapper">
+        <div class="icon-box">
+          <ion-icon name="book-outline"></ion-icon>
+        </div>
+
+        <h3 class="h3">Education</h3>
+      </div>
+
+      <ol class="timeline-list">
+
+        <li class="timeline-item">
+          <h4 class="h4 timeline-item-title">McMaster University</h4>
+          <span>Expected grad. - 2025</span>
+          <p class="timeline-text">
+            BASc, Computer Science
+          </p>
+        </li>
+
+      </ol>
+
+    </section>
+
+    <section class="timeline">
+
+      <div class="title-wrapper">
+        <div class="icon-box">
+          <ion-icon name="briefcase-outline"></ion-icon>
+        </div>
+
+        <h3 class="h3">Experience</h3>
+      </div>
+
+      <ol class="timeline-list">
+
+        <li class="timeline-item">
+          <h4 class="h4 timeline-item-title">Advanced Computer Technology Coordinator</h4>
+          <span>May 2023 - Present, <a href="https://onshipyards.com">Ontario Shipyards</a></span>
+          <p class="timeline-text">
+            As an Advanced Computer Technology Coordinator (Co-op) at Ontario Shipyards, developed an AI-powered application to enhance cross-departmental communication and operational efficiency. Coordinated advanced computer technology operations as part of Ontario Shipyard modernization projects. Built the company's website, enhancing its online presence.
+          </p>
+        </li>
+
+        <li class="timeline-item">
+          <h4 class="h4 timeline-item-title">Co-Founder & Lead</h4>
+          <span>September 2023 - Present, <a href="https://www.turksin.tech/">Turks in Tech Toronto</a></span>
+          <p class="timeline-text">
+            Co-Founded Turks in Tech Toronto, a chapter of the global Turkish tech community focused on fostering innovation, supporting startups, and creating a network for Turkish tech professionals and entrepreneurs. 
+            Organized large-scale tech networking events with distinguished speakers, attracting +200 attendees. 
+          </p>
+        </li>
+
+        <li class="timeline-item">
+          <h4 class="h4 timeline-item-title">Cultural Ambassador</h4>
+          <span>September 2022 - Present, <a href="https://meld.humanities.mcmaster.ca/about-us/">McMaster MELD Office</a></span>
+          <p class="timeline-text">
+            Prepared and organized cultural workshops to foster student engagement in the MELD program. Improved students' English language skills through participation in various activities.
+          </p>
+        </li>
+
+        <li class="timeline-item">
+          <h4 class="h4 timeline-item-title">Co-Founder</h4>
+          <span>June 2020 - Present, <a href="https://technosophia.org/">Technosophia</a></span>
+          <p class="timeline-text">
+            Co-founded Technosophia, a Euro-Asian society for technology professionals and students. Managed project coordination for workshops, leading to increased membership and participation.
+          </p>
+        </li>
+
+        <li class="timeline-item">
+          <h4 class="h4 timeline-item-title">Harvard University-Founded ALP Alumni</h4>
+          <span>April 2022 - October 2022, Aspire Institute</span>
+          <p class="timeline-text">
+            Finalist in the top 1% of 7,500 applicants for the Aspire Leadership Program. Completed a comprehensive leadership and technology entrepreneurship program.
+          </p>
+        </li>
+
+        <li class="timeline-item">
+          <h4 class="h4 timeline-item-title">Ground-Control Team Member</h4>
+          <span>November 2021 - April 2024, McMaster Rocketry Team</span>
+          <p class="timeline-text">
+            Contributed to the successful launch of McMaster Marauder-1 Rocket by monitoring and remotely operating experiments. Designed and implemented a real-time data visualization tool.
+          </p>
+        </li>
+
+      </ol>
+
+    </section>
+
+    <section class="timeline">
+
+      <div class="title-wrapper">
+        <div class="icon-box">
+          <ion-icon name="bulb-outline"></ion-icon>
+        </div>
+
+        <h3 class="h3">Projects</h3>
+      </div>
+
+      <ol class="timeline-list">
+
+        <li class="timeline-item">
+          <h4 class="h4 timeline-item-title">Heddle Hub, AI powered app</h4>
+          <span>May 2023 - Present, Ontario Shipyards</span>
+          <p class="timeline-text">
+            Designed and coded Heddle Hub, an AI-powered application tailored for departmental use within Ontario Shipyards. Utilized OpenAI APIs for the app's core functionality, coded in Python.
+          </p>
+        </li>
+
+        <li class="timeline-item">
+          <h4 class="h4 timeline-item-title">Graphene FET-based electron Detector</h4>
+          <span>January 2020 - May 2020, <a href="https://home.cern/">CERN</a></span>
+          <p class="timeline-text">
+            Pioneered the design of a low-cost Graphene FET detector for electron beams on particle accelerators. Ranked in the top 20 (4%) among 500 submissions in the CERN BL4S competition.
+          </p>
+        </li>
+
+      </ol>
+
+    </section>
+        
+        </div>
+      
+        
+       <!--
+        - #TEDx
+      -->
+
+      <div class="section-spacing">  
+      <section class="tedx">
+
+        <h3 class="h3 tedx-title">TEDx</h3>
+        
+        <ul class="tedx-list has-scrollbar"> 
+          <div class="video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/RsV2PmbwfkI" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<p>Giving a TEDx talk was an experience that I will always cherish. Receiving the invitation to give a TEDx talk filled me with excitement and a sense of honor. I had watched countless TED talks before and admired the speakers who were able to captivate and inspire their audience. Now it was my turn to take the stage and share my ideas.</p>
+
+<button id="readMoreBtn" onclick="toggleContent()">Read More</button>
+
+<div id="extraContent" style="display:none;">
+  <!-- The rest of the content goes here -->
+  <p>Robert Frost said, "Two roads diverged in a wood, and I took the one less traveled by, And that has made all the difference." In this talk, I will try to convey what it takes to walk the road I have chosen, the factors that make a difference, the choices I have faced, and the decisions I have made.
+
+          Hello everyone, my name is Markus Acar. I am a student and I was born and raised in Mardin. I am a young person who works to make a positive impact on people's lives and to make the world a more livable place. I don't want to introduce myself at length at the beginning, but I can share with you three foundations that make Markus who he is, and that are important in my current and future work: Limitlessness, Curiosity, and Thinking.
+          
+          From the moment I met boundaries, I was always a child who rejected them. Since childhood, while there was a vast universe winking at me with all its infinity when I looked up, I couldn't draw the picture in my mind within the frame that someone had drawn for me. The picture I wanted to be in was too big to fit in a frame, vibrant with all its colors, and full of excitement. Although it was not easy to overcome these boundaries, I knew that what I wanted to do was beyond the limits in my life. Neither the border of the Mardin province nor the school curriculum nor the psychological boundaries we constantly hear such as "give up this dream, you can't do it." I did not recognize any of these boundaries.
+          Did I encounter financial barriers? I worked in hotels in Antalya in the summers to solve them, to help my family, and even to improve my foreign language skills. When I realized that my success in school was not enough to achieve the pleasure I wanted, I was in the 10th grade. In the 10th grade, my school, Mardin Science High School, announced a national science camp project competition. I could have the opportunity to put my theoretical knowledge into practice in this competition. When I decided to participate in this competition, I may have entered a competition with schools that had dozens of successes before. However, after achieving success with the smart city project that I developed with a friend here, my desire to participate in such projects increased.
+          However, I had to make a decision because of the university exam, which is a part of the education system. Would I draw a student profile that is entirely focused on the exam-oriented curriculum or would I choose the path full of projects? Maybe I was too late to go beyond the curriculum boundary, but I had a tremendous desire to serve society within me. No matter how successful I was in school, even the highest grade I ever received during my school life did not give me the satisfaction that I felt when I smiled at someone without expecting anything in return and when I saw that person's happiness. Speaking of success, it should be noted that if the results of our work touch people in a positive way and create a positive impact, this is success. The community that makes us who we are...
+
+          The question that most intrigues me is: How can I contribute? To my mother, father, siblings, children, youth, science, technology... How can I make a contribution to the world? The unquenchable passion for this question is responsible for me breaking all the rules and limitations. There will be failures and difficulties on this journey, but not giving up should be our best ability that we can use to achieve our goals. When we experience failure, we should find the strength to start again. As a Japanese proverb states, "Fall seven times, stand up eight."
+          
+          In order to take our creativity to new levels, we need to reconnect with our childlike curiosity. We need to observe, explore, ask questions, and venture back into the unknown. Along with curiosity, there is also ambition and determination. After participating in this activity in 10th grade, I continued to participate in similar activities. I can say that I have had a connection with science and technology since childhood, but the cycle starts like this. When I graduated from middle school and got accepted into Mardin Science High School, my father gave me a few science books as a gift because of my interest in science. The most interesting one for me at that time was Stephen Hawking's "A Brief History of Time". After reading this book, my curiosity and interest in science intensified. If you ask me why, it might be because I couldn't understand most of the chapters of the book, so I became more curious and pursued it. Four years after my father bought those books, we won an award in a particle physics competition organized by CERN as a team. When I was talking to my father about this achievement, I said, "Do you remember, dad, you bought me a few books in the summer of 8th grade? Yes," he said. "Dad," I said, "those books paved the way for us to achieve an international success today. And now, Dad, I can understand those books better." Markus, who set out to make the world a better place, made new friends who shared common dreams. On this journey, we formed new teams and undertook initiatives. I couldn't just progress within the school curriculum. Yes, most of what I learned in school would also appear in the future and I would need to use it, but it couldn't just stay on paper. Similarly, this experience should also progress in project initiatives. When I participated in the particle physics project competition organized by CERN, I didn't just learn about sub-particles or Feynman diagrams. I learned how to motivate a team to achieve a goal, communicate with others, network, take risks, and avoid common mistakes.
+          
+          As I have participated in various technology events with my friends, I have realized that I enjoy being immersed in technology and I am not just pursuing a dream, but an ideal. Yes, I may have achieved some successes so far, but they are just the beginning for me. I need to continue my studies in computer science and improve my foreign language skills, as well as getting to know different cultures and expanding my network, which I believe will be an important factor in my future endeavors. That's why I decided to study in Canada, at McMaster University, which I thought would offer the best match for what I wanted to do. When making such a decision, it is important to be clear about what you want and work towards it. Even if it's just a 0.01% chance, we should try to implement the ideas we think about before going to bed while sipping our coffee in the morning. When I decided to study abroad, it couldn't just remain an idea. I started researching immediately, and believe me, sometimes you have to chase opportunities yourself.
+          
+          Many of us have the potential and talent in many areas, but we often hesitate when it comes to how to get started. Evaluate yourself for where you are now. What motivates you? What do you want to learn? What opportunities do you have? Decide on the best match for you right now and keep the door open to transition later. I am not an expert, I am a student, but I know how it worked for me and I am sharing it with you. Building a network to learn new things, bringing the right people into our lives for our lives to change, is one of the most important factors in creating ideas that will leave a mark in the world. One of the most important elements of the 21st century is social skills.
+          
+          I have to communicate with people in relevant fields to ensure that our work is sustainable, our projects are implemented, and knowledge is provided. I think I have often chased those people. If there is someone I need to contact, whether via email, in person, or via social media to obtain information or discuss ideas, whether it's a professor teaching at MIT, a CEO of a major company, a project student at another school, a scientist working at NASA, or a young entrepreneur who has just started their own startup, I always try to reach out to them using my own resources. You can reach people who seem unreachable, we are in an era where the internet is available and it is possible to access information from many sources online. It is impossible not to reach out when you really want to. When I first contacted our scientist Tansu Daylan who works at MIT, we started discussing whether we could organize a science conference in Mardin together with Prof. Mete Atature from Cambridge University. Later on, we had meetings with Tansu about our space technology and astronomy-based initiatives, organized online conferences under Technosophia, and our communication has continued until now. The most frequently asked questions when we bring our projects to light are "how did you come up with this idea?" and "what path did you follow?" These questions particularly arise in physics-based projects. I must say that critical thinking and analogical thinking, which are among the 21st century skills, come into play here.
+          
+          Now, what are these thinking styles, you may ask. Critical thinking is defined as "designing and managing projects, problem-solving, and making effective decisions using various resources." In today's world, we really do not learn or teach thinking skills. The education system should not make an obsession out of excessive specialization. It should encourage critical intelligence. Students do not have the necessary tools to analyze the modern world. We should learn how to think before we are taught what to think about. Through the use of analogies, people have come up with many innovative ideas and creative solutions to problems. Let me tell you this. When Kepler turned 25 at the end of the 16th century, he had accepted Copernicus' planet model in which the sun revolves around the orbit, and then asked another question: why do planets farther from the sun move more slowly? Kepler was so far beyond the limits of previous thinking that there was no evidence he could work with. Therefore, he had to use analogies. Just like Eddington using a tablecloth and some fruit to explain Einstein's theory of general relativity. I believe that we should approach topics in this way in our current and future work.
+          
+          In a world constantly facing rapidly changing demands, we need people who are not afraid to try new things, who think broadly and have a wide range of experiences to find creative solutions. Yes, I'm talking about the Leonardo da Vincis of the 21st century. We also need individuals who do not limit themselves, who do not recognize boundaries. I would like to end my speech with Herminia Ibarra's words: " We need to learn who we are in practice, not in theory. Thank you for listening to me.</p>
+</div>
+
+<script>
+  function toggleContent() {
+    var content = document.getElementById("extraContent");
+    var button = document.getElementById("readMoreBtn");
+
+    if (content.style.display === "none") {
+      content.style.display = "block";
+      button.innerText = "Read Less";
+    } else {
+      content.style.display = "none";
+      button.innerText = "Read More";
+    }
+  }
+</script>
+</div>
+          
+          
+
+      <!--
+        - #CONTACT
+      -->
+  <div class="section-spacing">
+  <section class="contact-info">
+    <h3 class="h3 info-title">Get in touch</h3>
+    <ul class="contact-info">
+      <li class="social-item">
+            <a href="mailto:acarm@mcmaster.ca" class="contact-link">acarm@mcmaster.ca</a>
+          </li>
+     </ul>
+
+    <p>Follow me on social media:</p>
+    <ul class="social-media">
+      <li class="social-item">
+            <a href="https://www.linkedin.com/in/markus-acar/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://twitter.com/markus_acar" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/markus.acar/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+    </ul>
+  </section>
+        
+      <section class="mapbox" data-mapbox>
+    <figure>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11622.194868525497!2d-79.9192254!3d43.260879!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x399e00ea6143011c!2sMcMaster%20University!5e0!3m2!1sen!2sca!4v1679798546650!5m2!1sen!2sca"
+        width="400" height="300" loading="lazy"></iframe>
+    </figure>
+  </section>
+     </div>   
+      </article>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  
+</body>
+
+</html>

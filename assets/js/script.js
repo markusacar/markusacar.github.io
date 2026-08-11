@@ -17,11 +17,13 @@ const toggleIcon = navToggle.querySelector('ion-icon');
 const closeMenu = () => {
   header.classList.remove('menu-open');
   toggleIcon.setAttribute('name', 'menu-outline');
+  navToggle.setAttribute('aria-expanded', 'false');
 };
 
 navToggle.addEventListener('click', () => {
   const open = header.classList.toggle('menu-open');
   toggleIcon.setAttribute('name', open ? 'close-outline' : 'menu-outline');
+  navToggle.setAttribute('aria-expanded', String(open));
 });
 
 navLinks.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeMenu));

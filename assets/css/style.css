@@ -179,7 +179,8 @@ section { padding-block: var(--section); position: relative; }
 .affiliations b { color: var(--ink); font-weight: 500; }
 
 /* ---------- About ---------- */
-.about-grid { display: grid; grid-template-columns: 1fr 0.82fr; gap: clamp(32px, 5vw, 70px); align-items: start; }
+.about-grid { display: grid; grid-template-columns: 1fr; align-items: start; }
+.about-text { max-width: 800px; }
 .about-text .crumb { margin-bottom: 14px; }
 .about-text h2 { font-weight: 700; font-size: clamp(1.9rem, 4.4vw, 3rem); letter-spacing: -0.025em; line-height: 1.02; margin-bottom: 24px; }
 .about-text h2 .red { color: var(--red); }
@@ -189,12 +190,6 @@ section { padding-block: var(--section); position: relative; }
 .language-line { border-top: 1px solid var(--line); padding-top: 18px; margin-top: 26px; }
 .language-line > span { color: var(--red); font-family: var(--mono); font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; }
 .language-line p { color: var(--ink) !important; font-family: var(--mono); font-size: .72rem !important; letter-spacing: .04em; margin: 8px 0 0 !important; }
-.about-stats { display: grid; gap: 0; border: 1px solid var(--line); background: rgba(255, 255, 255, 0.4); }
-.stat { padding: 22px 24px; border-bottom: 1px solid var(--line); }
-.stat:last-child { border-bottom: none; }
-.stat .k { font-weight: 700; font-size: 2rem; letter-spacing: -0.02em; line-height: 1; }
-.stat .k .red { color: var(--red); }
-.stat .v { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.04em; color: var(--ink-mute); margin-top: 9px; text-transform: uppercase; }
 
 /* ---------- Midra feature ---------- */
 .feature { position: relative; overflow: hidden; }
